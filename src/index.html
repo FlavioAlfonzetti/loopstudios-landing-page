@@ -89,7 +89,10 @@
     <!-- SECTION OUR CREATIONS -->
     <section class="our-creations">
       <div class="container px-4 pt-lg-5 px-lg-5">
-        <h1>Our creations</h1>
+        <div class="our-creations__header">
+          <h1>Our creations</h1>
+          <button class="see-all__btn-desktop">See all</button>
+        </div>
         <div class="creations">
           <div class="creation creation-1">
             <h2>
@@ -140,7 +143,7 @@
             </h2>
           </div>
         </div>
-        <div class="see-all__txt">
+        <div class="see-all__txt-mobile">
           <h2>See all</h2>
         </div>
       </div>
@@ -149,14 +152,16 @@
     <!-- FOOTER -->
     <footer>
       <div
-        class="container px-0 py-5 d-flex flex-column align-items-center text-center gap-4"
+        class="container px-0 py-5 pt-lg-5 pb-lg-3 d-flex flex-column flex-lg-row align-items-center gap-4 justify-content-lg-between"
       >
-        <div class="footer-1 d-grid gap-4">
+        <div
+          class="footer-1 d-flex flex-column gap-4 text-center text-lg-start"
+        >
           <div class="footer__logo">
             <img src="images/logo.svg" alt="" />
           </div>
           <div class="footer__navigation">
-            <ul class="d-grid px-0 py-2 gap-4">
+            <ul class="d-flex flex-column flex-lg-row px-0 py-2 gap-4">
               <li>About</li>
               <li>Careers</li>
               <li>Events</li>
@@ -165,7 +170,9 @@
             </ul>
           </div>
         </div>
-        <div class="footer-2 d-grid gap-3">
+        <!-- <div
+          class="footer-2 d-flex flex-column gap-3 gap-lg-4 text-center align-items-lg-end"
+        >
           <div class="footer__icons">
             <a href="#">
               <img src="images/icon-facebook.svg" alt="" />
@@ -183,7 +190,7 @@
           <div class="footer__copy">
             <p>© 2021 Loopstudios. All rights reserved.</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </footer>
 

@@ -197,10 +197,6 @@ body {
   .interactive-vr {
     padding-top: 6rem;
 
-    @media (min-width: 960px) {
-      /* padding-top: 0; */
-    }
-
     .container {
       position: relative;
       display: flex;
@@ -225,14 +221,14 @@ body {
 
         @media (min-width: 960px) {
           position: absolute;
-          right: -6rem;
+          right: -10rem;
           bottom: -0.1rem;
           transform: translateX(-35%);
           text-align: left;
-          width: 44%;
+          width: 47%;
           background-color: var(--clr-neutral-100);
           justify-content: flex-end;
-          padding: 5rem 5rem 0;
+          padding: 6rem 6rem 0;
           gap: 1rem;
         }
 
@@ -267,11 +263,33 @@ body {
   .our-creations {
     padding-block: 4rem;
 
+    @media (min-width: 960px) {
+      padding-block: 10rem 12rem;
+    }
+
     .creation {
       position: relative;
       background-size: cover;
+      background-repeat: no-repeat;
       height: 7rem;
       cursor: pointer;
+
+      @media (min-width: 960px) {
+        background-size: contain;
+        width: 17.5rem;
+        height: 30.8rem;
+        // height: 29rem;
+
+        &:hover::before {
+          background: rgba(255, 255, 255, 0.8);
+          transition: 0.2s all ease-in-out;
+        }
+
+        &:hover h2 {
+          color: var(--clr-neutral-900);
+          transition: 0.2s all ease-in-out;
+        }
+      }
 
       &::before {
         content: "";
@@ -285,6 +303,14 @@ body {
           rgba(0, 0, 0, 0.7),
           rgba(0, 0, 0, 0)
         );
+
+        @media (min-width: 960px) {
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0)
+          );
+        }
       }
 
       h2 {
@@ -295,6 +321,13 @@ body {
         font-size: 1.4rem;
         left: 6%;
         top: 42%;
+
+        @media (min-width: 960px) {
+          top: unset;
+          bottom: 3.5%;
+          left: 15%;
+          font-size: 2.2rem;
+        }
       }
     }
 
@@ -302,18 +335,62 @@ body {
       display: flex;
       flex-direction: column;
 
-      h1 {
-        padding-bottom: 2.5rem;
-        text-transform: uppercase;
-        text-align: center;
-        font-family: var(--ff-secondary);
-        font-size: 2rem;
+      .our-creations__header {
+        @media (min-width: 960px) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 5rem;
+        }
+
+        h1 {
+          padding-bottom: 2.5rem;
+          text-transform: uppercase;
+          text-align: center;
+          font-family: var(--ff-secondary);
+          font-size: 2rem;
+
+          @media (min-width: 960px) {
+            padding-bottom: 0;
+            text-align: left;
+            font-size: 3.4rem;
+            margin-bottom: 0;
+          }
+        }
+
+        .see-all__btn-desktop {
+          display: none;
+
+          @media (min-width: 960px) {
+            display: block;
+            background-color: var(--clr-neutral-100);
+            color: var(--clr-neutral-900);
+            border: 2px solid var(--clr-neutral-900);
+            text-transform: uppercase;
+            height: 3rem;
+            width: 10rem;
+            font-family: var(--ff-primary);
+            font-size: 0.9rem;
+            letter-spacing: 0.25rem;
+
+            &:hover {
+              transition: 0.2s all;
+              background-color: var(--clr-neutral-900);
+              color: var(--clr-neutral-100);
+            }
+          }
+        }
       }
 
       .creations {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+
+        @media (min-width: 960px) {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+        }
 
         .creation-1 {
           background-image: url("../images/mobile/image-deep-earth.jpg");
@@ -339,9 +416,36 @@ body {
         .creation-8 {
           background-image: url("../images/mobile/image-fisheye.jpg");
         }
+
+        @media (min-width: 960px) {
+          .creation-1 {
+            background-image: url("../images/desktop/image-deep-earth.jpg");
+          }
+          .creation-2 {
+            background-image: url("../images/desktop/image-night-arcade.jpg");
+          }
+          .creation-3 {
+            background-image: url("../images/desktop/image-soccer-team.jpg");
+          }
+          .creation-4 {
+            background-image: url("../images/desktop/image-grid.jpg");
+          }
+          .creation-5 {
+            background-image: url("../images/desktop/image-from-above.jpg");
+          }
+          .creation-6 {
+            background-image: url("../images/desktop/image-pocket-borealis.jpg");
+          }
+          .creation-7 {
+            background-image: url("../images/desktop/image-curiosity.jpg");
+          }
+          .creation-8 {
+            background-image: url("../images/desktop/image-fisheye.jpg");
+          }
+        }
       }
 
-      .see-all__txt {
+      .see-all__txt-mobile {
         border: 1px solid var(--clr-neutral-900);
         padding: 0.7rem 0;
         margin: 2rem auto;
@@ -349,6 +453,10 @@ body {
         padding-inline: 0;
         width: 52%;
         cursor: pointer;
+
+        @media (min-width: 960px) {
+          display: none;
+        }
 
         h2 {
           text-transform: uppercase;
@@ -370,16 +478,45 @@ body {
     .container {
       .footer-1 {
         .footer__logo {
+          @media (min-width: 960px) {
+            position: relative;
+            top: 15%;
+          }
+
           img {
             width: 80%;
+
+            @media (min-width: 960px) {
+              /* width: 36%; */
+              width: 10rem;
+            }
           }
         }
 
         .footer__navigation {
           ul {
+            @media (min-width: 960px) {
+              gap: 2rem !important;
+            }
+
             li {
               color: var(--clr-neutral-100);
               list-style: none;
+              cursor: pointer;
+
+              @media (min-width: 960px) {
+                /* padding-right: 1rem; */
+                letter-spacing: 1px;
+
+                &:hover::after {
+                  content: "";
+                  display: flex;
+                  margin: 0 auto;
+                  margin-top: 0.8rem;
+                  outline: 1px solid var(--clr-neutral-100);
+                  width: 1.5rem;
+                }
+              }
             }
           }
         }
@@ -390,9 +527,26 @@ body {
           display: flex;
           justify-content: center;
           gap: 1rem;
+
+          a {
+            @media (min-width: 960px) {
+              &:hover::after {
+                content: "";
+                display: flex;
+                margin: 0 auto;
+                margin-top: 0.8rem;
+                outline: 1px solid var(--clr-neutral-100);
+                width: 1.5rem;
+              }
+            }
+          }
         }
 
         .footer__copy {
+          @media (min-width: 960px) {
+            /* padding-top: 0.8rem; */
+          }
+
           p {
             margin-bottom: 0;
             color: var(--clr-neutral-500);
