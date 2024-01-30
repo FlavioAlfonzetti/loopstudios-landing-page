@@ -13,8 +13,9 @@
     <title>Bootstrap w/ Vite</title>
   </head>
   <body>
+    <!-- SECTION HERO -->
     <section class="hero">
-      <div class="container pt-4">
+      <div class="container pt-4 pt-lg-5 px-md-0 px-lg-5">
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid pe-0">
             <a class="navbar-brand" href="#">
@@ -35,7 +36,6 @@
                 alt=""
               />
               <img class="hamburger-close" src="images/icon-close.svg" alt="" />
-              <!-- <span class="navbar-toggler-icon"></span> -->
             </button>
             <div class="navbar-nav d-none d-lg-flex">
               <a class="nav-link" href="#">About</a>
@@ -44,19 +44,6 @@
               <a class="nav-link" href="#">Products</a>
               <a class="nav-link" href="#">Support</a>
             </div>
-
-            <!-- <div
-              class="collapse navbar-collapse justify-content-end"
-              id="navbarNavAltMarkup"
-            >
-              <div class="navbar-nav">
-                <a class="nav-link" href="#">About</a>
-                <a class="nav-link" href="#">Careers</a>
-                <a class="nav-link" href="#">Events</a>
-                <a class="nav-link" href="#">Products</a>
-                <a class="nav-link" href="#">Support</a>
-              </div>
-            </div> -->
           </div>
         </nav>
         <div class="hero-txt">
@@ -68,7 +55,7 @@
           </h1>
         </div>
       </div>
-      <div class="hamburger-menu">
+      <div class="hamburger-menu px-sm-5">
         <div class="navbar-nav">
           <a class="nav-link" href="#">About</a>
           <a class="nav-link" href="#">Careers</a>
@@ -81,9 +68,12 @@
 
     <!-- SECTION INTERACTIVE VR -->
     <section class="interactive-vr">
-      <div class="container px-4">
-        <div class="vr__img">
+      <div class="container px-4 pt-lg-5 px-md-0 px-lg-5">
+        <div class="vr__img d-lg-none">
           <img src="images/mobile/image-interactive.jpg" alt="" />
+        </div>
+        <div class="vr__img d-none d-lg-block">
+          <img src="images/desktop/image-interactive.jpg" alt="" />
         </div>
         <div class="vr__txt">
           <h1>The leader in interactive VR</h1>
@@ -99,8 +89,11 @@
 
     <!-- SECTION OUR CREATIONS -->
     <section class="our-creations">
-      <div class="container px-4">
-        <h1>Our creations</h1>
+      <div class="container px-4 pt-lg-5 px-md-0 px-lg-5">
+        <div class="our-creations__header">
+          <h1>Our creations</h1>
+          <button class="see-all__btn-desktop">See all</button>
+        </div>
         <div class="creations">
           <div class="creation creation-1">
             <h2>
@@ -151,21 +144,25 @@
             </h2>
           </div>
         </div>
-        <div class="see-all__txt">
+        <div class="see-all__txt-mobile">
           <h2>See all</h2>
         </div>
       </div>
     </section>
+
+    <!-- FOOTER -->
     <footer>
       <div
-        class="container px-0 py-5 d-flex flex-column align-items-center text-center gap-4"
+        class="container px-0 px-lg-5 py-5 pt-lg-5 pb-lg-4 d-flex flex-column flex-lg-row align-items-center gap-4 justify-content-lg-between"
       >
-        <div class="footer-1 d-grid gap-4">
+        <div
+          class="footer-1 d-flex flex-column gap-4 text-center text-lg-start"
+        >
           <div class="footer__logo">
             <img src="images/logo.svg" alt="" />
           </div>
           <div class="footer__navigation">
-            <ul class="d-grid px-0 py-2 gap-4">
+            <ul class="d-flex flex-column flex-lg-row px-0 py-2 gap-4">
               <li>About</li>
               <li>Careers</li>
               <li>Events</li>
@@ -174,7 +171,9 @@
             </ul>
           </div>
         </div>
-        <div class="footer-2 d-grid gap-3">
+        <div
+          class="footer-2 d-flex flex-column gap-3 gap-lg-4 text-center align-items-lg-end"
+        >
           <div class="footer__icons">
             <a href="#">
               <img src="images/icon-facebook.svg" alt="" />
